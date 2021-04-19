@@ -16,7 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/produtos', 'ProdutosControlador@index'); // 1)
-
-//Route::get('/produtos', 'ProdutosControlador@index')->name('produtos')->middleware('auth'); // 2)
