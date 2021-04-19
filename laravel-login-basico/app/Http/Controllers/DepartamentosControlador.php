@@ -23,6 +23,7 @@ class DepartamentosControlador extends Controller
         echo "</ul>";
         echo "<hr>";
 
+        //Verifica se está logado
         if (Auth::check()) {
             $user = Auth::user();
             echo "<h4>Você está logado!</h4>";
