@@ -24,3 +24,8 @@ Route::get('/produtos', 'ProdutosControlador@index'); // 1)
 //Route::get('/produtos', 'ProdutosControlador@index')->name('produtos')->middleware('auth'); // 2)
 
 Route::get('/departamentos', 'DepartamentosControlador@index'); // 5)
+
+
+Route::get('/usuario', function() {
+    return view('usuario');
+}); // 6)
