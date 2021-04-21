@@ -46,6 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        // =>>> novo
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
+        ///////////
     ],
 
     /*
@@ -75,6 +86,13 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        // =>>> novo
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+        /////////////
     ],
 
     /*
@@ -98,6 +116,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+        /////// ==>>> novo
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        ///////////
     ],
 
 ];
